@@ -19,7 +19,7 @@
   selected: true
   takeaway: ""  # TODO: one-line takeaway
   paper: "https://openreview.net/forum?id=ydh3XsRypN"
-  code: ""
+  code: "https://github.com/SamsungLabs/metro-wm"
 
 - title: "The Reward Model Selection Crisis in Personalized Alignment"
   authors: [Fady Rezk, Yuangang Pan, Chuan-Sheng Foo, Xun Xu, Nancy Chen, Henry Gouk, Timothy Hospedales]
@@ -46,7 +46,7 @@
   selected: true
   takeaway: ""  # TODO: one-line takeaway
   paper: "https://arxiv.org/abs/2502.04387"
-  code: ""
+  code: "https://github.com/SamsungLabs/fedp2eft"
 
 - title: "EEVEE and GATE: Finding the Right Benchmarks and How to Run Them Seamlessly"
   authors: [Antreas Antoniou, Eleni Triantafillou, Hugo Larochelle, Sebastien Montella, Fady Rezk, Kiyoon Kim, Linus Ericsson, Pavlos Vougiouklis, Justin Engelmann, Elliot J. Crowley, Srihari Humbarwadi, Yi Liu, Guang Yang, Jeff Z. Pan, Amos Storkey]
@@ -55,7 +55,7 @@
   selected: true
   takeaway: ""  # TODO: one-line takeaway
   paper: "https://openreview.net/forum?id=0SMhqvgHST"
-  code: ""
+  code: "https://github.com/AntreasAntoniou/GATE"
 
 - title: "Liouna: Biologically Plausible Learning for Efficient Pre-Training of Transferrable Deep Models"
   authors: [Fady Rezk, Antreas Antoniou, Henry Gouk, Timothy Hospedales]
