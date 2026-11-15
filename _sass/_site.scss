@@ -5,8 +5,41 @@
 
 $content-width: 64rem;   // outer column (masthead + main share it)
 $label-col: 12rem;       // left column holding section titles on wide screens
-$accent-soft: mix(#fff, $accent, 92%);
-$accent-mid: mix(#fff, $accent, 70%);
+/* ---- Colour themes ----
+   Light is the default. Dark applies only when <html data-theme="dark">, i.e. the
+   visitor chose it with the toggle (see _includes/head/custom.html). */
+@mixin light-theme {
+  --bg: #fff;
+  --ink: #{$ink};
+  --ink-soft: #{lighten($ink, 15%)};
+  --muted: #{$muted};
+  --rule: #{$rule};
+  --accent: #{$accent};
+  --accent-strong: #{darken($accent, 5%)};
+  --accent-soft: #{mix(#fff, $accent, 92%)};
+  --accent-mid: #{mix(#fff, $accent, 70%)};
+  --on-accent: #fff;
+  --masthead-bg: rgba(255, 255, 255, 0.92);
+  --photo-shadow: 0 1px 2px rgba(0, 0, 0, 0.06), 0 10px 30px -12px rgba(31, 78, 140, 0.35);
+  color-scheme: light;
+}
+@mixin dark-theme {
+  --bg: #0f1216;
+  --ink: #e4e7eb;
+  --ink-soft: #c3c9d1;
+  --muted: #98a1ac;
+  --rule: #252a31;
+  --accent: #82aaf0;
+  --accent-strong: #a9c4f5;
+  --accent-soft: rgba(130, 170, 240, 0.13);
+  --accent-mid: rgba(130, 170, 240, 0.45);
+  --on-accent: #0f1216;
+  --masthead-bg: rgba(15, 18, 22, 0.88);
+  --photo-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 10px 30px -12px rgba(0, 0, 0, 0.8);
+  color-scheme: dark;
+}
+:root { @include light-theme; }
+:root[data-theme="dark"] { @include dark-theme; }
 
 html {
   font-size: 16px;
@@ -15,27 +48,29 @@ html {
 }
 
 body {
-  background: #fff;
-  color: $ink;
+  background: var(--bg);
+  color: var(--ink);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 a {
-  color: $accent;
+  color: var(--accent);
   text-decoration: none;
   text-underline-offset: 0.18em;
   &:hover { text-decoration: underline; }
 }
+a:visited, a:hover { color: var(--accent); }
+h1, h2, h3, h4, h5, h6 { color: var(--ink); }
 
 /* ---- Masthead: sticky, slim, same column as content ---- */
 .masthead {
   position: sticky;
   top: 0;
-  background: rgba(255, 255, 255, 0.92);
+  background: var(--masthead-bg);
   -webkit-backdrop-filter: saturate(180%) blur(8px);
   backdrop-filter: saturate(180%) blur(8px);
-  border-bottom: 1px solid $rule;
+  border-bottom: 1px solid var(--rule);
   animation: none;
   -webkit-animation: none;
 }
@@ -55,8 +90,8 @@ a {
   font-weight: 600;
   padding: 0;
 }
-.masthead__menu-item a { color: $muted; &:hover { color: $accent; } }
-.greedy-nav .visible-links a:before { background: $accent; }
+.masthead__menu-item a { color: var(--muted); &:hover { color: var(--accent); } }
+.greedy-nav .visible-links a:before { background: var(--accent); }
 
 /* ---- Main column ---- */
 #main.site-main {
@@ -70,7 +105,7 @@ a {
 
 .site-main h1, .site-main h2, .site-main h3 {
   font-family: $serif;
-  color: $ink;
+  color: var(--ink);
   letter-spacing: -0.01em;
 }
 
@@ -94,7 +129,7 @@ a {
   object-fit: cover;
   object-position: 50% 30%;
   border-radius: 14px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06), 0 10px 30px -12px rgba(31, 78, 140, 0.35);
+  box-shadow: var(--photo-shadow);
 }
 .hero-name {
   font-size: 3rem;
@@ -104,7 +139,7 @@ a {
 }
 .hero-role {
   font-size: 1.2rem;
-  color: $muted;
+  color: var(--muted);
   margin: 0 0 0.6rem;
 }
 .hero-currently {
@@ -115,8 +150,8 @@ a {
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 50%;
-    background: $accent;
-    box-shadow: 0 0 0 3px $accent-soft;
+    background: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-soft);
     margin-right: 0.55rem;
     vertical-align: 0.08em;
   }
@@ -134,14 +169,14 @@ a {
     align-items: center;
     gap: 0.45rem;
     padding: 0.4rem 0.8rem;
-    border: 1px solid $rule;
+    border: 1px solid var(--rule);
     border-radius: 999px;
     font-size: 0.85rem;
     font-weight: 500;
-    color: $ink;
+    color: var(--ink);
     transition: border-color 0.15s, color 0.15s, background 0.15s;
-    i { color: $accent; }
-    &:hover { text-decoration: none; border-color: $accent; background: $accent-soft; color: $accent; }
+    i { color: var(--accent); }
+    &:hover { text-decoration: none; border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
   }
 }
 .hero-interests {
@@ -155,8 +190,8 @@ a {
     margin: 0;
     padding: 0.2rem 0.65rem;
     border-radius: 6px;
-    background: $accent-soft;
-    color: darken($accent, 5%);
+    background: var(--accent-soft);
+    color: var(--accent-strong);
     font-size: 0.78rem;
     font-weight: 500;
   }
@@ -168,7 +203,7 @@ a {
   grid-template-columns: $label-col 1fr;
   gap: 2.5rem;
   padding: 2.75rem 0;
-  border-top: 1px solid $rule;
+  border-top: 1px solid var(--rule);
   scroll-margin-top: 3.5rem;
 }
 .section-title {
@@ -185,7 +220,7 @@ a {
     width: 1.75rem;
     height: 3px;
     border-radius: 2px;
-    background: $accent;
+    background: var(--accent);
     margin-top: 0.6rem;
   }
 }
@@ -196,7 +231,7 @@ a {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: $muted !important;
+  color: var(--muted) !important;
   margin: 0 0 0.9rem;
   & ~ .subhead { margin-top: 2rem; }
 }
@@ -219,7 +254,7 @@ a {
 .news-date {
   font-size: 0.8rem;
   font-weight: 600;
-  color: $accent;
+  color: var(--accent);
   padding-top: 0.15rem;
   font-variant-numeric: tabular-nums;
 }
@@ -237,7 +272,7 @@ details > summary {
   gap: 0.35rem;
   font-size: 0.82rem;
   font-weight: 500;
-  color: $accent;
+  color: var(--accent);
   &::-webkit-details-marker { display: none; }
   &:before {
     content: "+";
@@ -260,8 +295,8 @@ details[open] > summary:before { content: "−"; }
   display: inline-block;
   padding: 0.2rem 0.55rem;
   border-radius: 6px;
-  background: $accent-soft;
-  color: darken($accent, 5%);
+  background: var(--accent-soft);
+  color: var(--accent-strong);
   font-size: 0.72rem;
   font-weight: 600;
   line-height: 1.4;
@@ -274,12 +309,12 @@ details[open] > summary:before { content: "−"; }
   font-size: 1.08rem;
   font-weight: 600;
   line-height: 1.35;
-  a { color: $ink; &:hover { color: $accent; text-decoration: none; } }
+  a { color: var(--ink); &:hover { color: var(--accent); text-decoration: none; } }
 }
-.pub-authors { font-size: 0.88rem; margin-top: 0.2rem; color: lighten($ink, 15%); strong { font-weight: 600; color: $ink; } }
-.pub-venue { font-size: 0.85rem; color: $muted; font-style: italic; margin-top: 0.1rem; }
+.pub-authors { font-size: 0.88rem; margin-top: 0.2rem; color: var(--ink-soft); strong { font-weight: 600; color: var(--ink); } }
+.pub-venue { font-size: 0.85rem; color: var(--muted); font-style: italic; margin-top: 0.1rem; }
 .pub-note, .pub-takeaway { font-size: 0.9rem; margin-top: 0.3rem; }
-.pub-takeaway { padding-left: 0.75rem; border-left: 2px solid $accent-mid; }
+.pub-takeaway { padding-left: 0.75rem; border-left: 2px solid var(--accent-mid); }
 .pub-links {
   margin-top: 0.4rem;
   a {
@@ -301,12 +336,12 @@ details[open] > summary:before { content: "−"; }
 }
 .xp-dates {
   font-size: 0.8rem;
-  color: $muted;
+  color: var(--muted);
   padding-top: 0.15rem;
   font-variant-numeric: tabular-nums;
 }
 .xp-role { font-weight: 600; line-height: 1.35; }
-.xp-org { font-size: 0.9rem; color: $muted; }
+.xp-org { font-size: 0.9rem; color: var(--muted); }
 .xp-note { font-size: 0.88rem; margin-top: 0.2rem; }
 .xp-details {
   margin-top: 0.3rem;
@@ -323,7 +358,7 @@ details[open] > summary:before { content: "−"; }
       width: 0.3rem;
       height: 0.3rem;
       border-radius: 50%;
-      background: $accent-mid;
+      background: var(--accent-mid);
     }
   }
 }
@@ -331,9 +366,9 @@ details[open] > summary:before { content: "−"; }
 /* ---- Footer ---- */
 .page__footer {
   float: none;
-  background: #fff;
-  border-top: 1px solid $rule;
-  color: $muted;
+  background: var(--bg);
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
   margin-top: 0;
   footer {
     max-width: $content-width;
@@ -372,7 +407,7 @@ details[open] > summary:before { content: "−"; }
   line-height: 1.7;
   p { margin: 0 0 1rem; }
   p:last-child { margin-bottom: 0; }
-  .closing { font-weight: 500; color: $ink; }
+  .closing { font-weight: 500; color: var(--ink); }
 }
 
 /* ---- Research areas ---- */
@@ -395,7 +430,7 @@ details[open] > summary:before { content: "−"; }
     top: 0.15rem;
     font-size: 0.78rem;
     font-weight: 600;
-    color: $accent;
+    color: var(--accent);
     font-variant-numeric: tabular-nums;
   }
   > span { display: block; }
@@ -406,8 +441,8 @@ details[open] > summary:before { content: "−"; }
   margin-left: 0.4rem;
   padding: 0.05rem 0.45rem;
   border-radius: 999px;
-  background: $accent;
-  color: #fff;
+  background: var(--accent);
+  color: var(--on-accent);
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.04em;
@@ -415,4 +450,54 @@ details[open] > summary:before { content: "−"; }
   vertical-align: 0.15em;
 }
 .research-desc { font-size: 0.93rem; margin-top: 0.15rem; }
-.research-venue { font-size: 0.85rem; color: $muted; font-style: italic; margin-top: 0.15rem; }
+.research-venue { font-size: 0.85rem; color: var(--muted); font-style: italic; margin-top: 0.15rem; }
+
+/* ---- Theme-aware overrides for inherited Minimal Mistakes pieces ---- */
+.greedy-nav { background: transparent; }
+.greedy-nav a { color: var(--ink); }
+.greedy-nav .hidden-links {
+  background: var(--bg);
+  border-color: var(--rule);
+  &:before { border-color: var(--rule) transparent; }
+  &:after { border-color: var(--bg) transparent; }
+  li { border-bottom-color: var(--rule); }
+  a { color: var(--muted); &:hover { color: var(--accent); background: var(--accent-soft); } }
+}
+.navicon, .navicon:before, .navicon:after { background: var(--ink); }
+.close .navicon { background: transparent; }
+.greedy-nav__toggle:hover .navicon,
+.greedy-nav__toggle:hover .navicon:before,
+.greedy-nav__toggle:hover .navicon:after { background: var(--accent); }
+.greedy-nav__toggle:hover.close .navicon { background: transparent; }
+/* The theme's full-page overlay behind the open mobile menu gets trapped inside the
+   blurred sticky masthead and just greys out the bar, so drop it. */
+.greedy-nav__toggle:before { display: none; }
+.page__content, .page__title, .page__meta { color: var(--ink); }
+.page__content hr, .page__content h2 { border-color: var(--rule); }
+
+/* ---- Light/dark toggle (top right of the masthead) ---- */
+.theme-toggle {
+  flex: none;
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  margin-left: 0.75rem;
+  padding: 0;
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+  &:hover, &:focus-visible { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
+  .icon-sun { display: none; }
+}
+:root[data-theme="dark"] .theme-toggle {
+  .icon-sun { display: inline; }
+  .icon-moon { display: none; }
+}
+.no-js .theme-toggle { display: none; }

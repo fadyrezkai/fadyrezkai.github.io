@@ -11,6 +11,11 @@ Personal research site. Jekyll + Minimal Mistakes, deployed to GitHub Pages by
   renders all of `publications.yml` (`selected: true` controls the home page).
 - Minimal Mistakes is vendored. Do not edit `_sass/minimal-mistakes/`. Restyle via the
   variables at the top of `assets/css/main.scss` and the rules in `_sass/_site.scss`.
+- Light/dark mode: colours are CSS variables (`--bg`, `--ink`, `--accent`, ...) defined
+  in the light/dark mixins at the top of `_sass/_site.scss`. Use `var(--...)` in new
+  rules, never Sass colour variables, or dark mode breaks. Any new colour needs a value
+  in both mixins. The toggle lives in `_includes/masthead.html`; the theme is set before
+  first paint in `_includes/head/custom.html` and switched in `_includes/footer/custom.html`.
 - Pages use `_layouts/plain.html`; partials are `_includes/profile-header.html`,
   `publication.html`, `experience-entry.html`.
 - The CV PDF at `assets/files/Fady_Rezk_CV.pdf` is the source of truth for facts.

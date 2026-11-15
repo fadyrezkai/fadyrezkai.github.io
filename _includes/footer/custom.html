@@ -1,3 +1,24 @@
 <!-- start custom footer snippets -->
 
+<!-- Light/dark toggle. The initial theme is set in _includes/head/custom.html. -->
+<script>
+  (function () {
+    var root = document.documentElement;
+    var button = document.querySelector('.theme-toggle');
+    if (!button) return;
+
+    function apply(theme) {
+      root.setAttribute('data-theme', theme);
+      button.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+    }
+    apply(root.getAttribute('data-theme') || 'light');
+
+    button.addEventListener('click', function () {
+      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      apply(next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+    });
+  })();
+</script>
+
 <!-- end custom footer snippets -->
