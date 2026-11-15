@@ -1,0 +1,18 @@
+{%- assign e = include.entry -%}
+<li class="xp">
+  <div class="xp-dates">{{ e.dates }}</div>
+  <div class="xp-main">
+    <div class="xp-role">{{ e.role }}</div>
+    <div class="xp-org">{% if e.url %}<a href="{{ e.url }}">{{ e.org }}</a>{% else %}{{ e.org }}{% endif %}{% if e.location %} · {{ e.location }}{% endif %}</div>
+    {%- if e.points %}
+    <details class="xp-details">
+      <summary>Details</summary>
+      <ul>
+        {%- for point in e.points %}
+        <li>{{ point | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+        {%- endfor %}
+      </ul>
+    </details>
+    {%- endif %}
+  </div>
+</li>

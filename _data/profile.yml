@@ -1,0 +1,34 @@
+# Home page hero.
+
+name: "Fady Rezk"
+role: "Research Scientist: Evaluation, Post-Training & World Models"
+photo: "/assets/images/profile.jpg"
+
+# Short factual line under the role (from the CV). Leave empty to hide.
+currently: "Currently: World Models Research at Samsung AI Research, Cambridge"
+
+# Topic chips under the links. Phrased from the CV summary; edit freely or empty the list.
+interests:
+  - "Long-horizon planning with world models"
+  - "Reliable agentic systems"
+  - "Benchmarking & evaluation"
+  - "Efficient AI"
+  - "Trustworthy AI & alignment"
+
+# icon = Font Awesome 5 class (loaded by the theme)
+links:
+  - label: "Email"
+    icon: "fas fa-envelope"
+    url: "mailto:fady.r.ghattas@gmail.com"
+  - label: "Scholar"
+    icon: "fas fa-graduation-cap"
+    url: "https://scholar.google.com/citations?user=WPdQj24AAAAJ"
+  - label: "GitHub"
+    icon: "fab fa-github"
+    url: "https://github.com/FadyRezkGhattas"
+  - label: "LinkedIn"
+    icon: "fab fa-linkedin-in"
+    url: "https://www.linkedin.com/in/fady-rezk/"
+  - label: "CV"
+    icon: "fas fa-file-pdf"
+    url: "/assets/files/Fady_Rezk_CV.pdf"

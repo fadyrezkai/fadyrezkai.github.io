@@ -5,5 +5,31 @@ search: false
 
 @charset "utf-8";
 
+/* ---- Site look: change these few variables to restyle the whole site ---- */
+$accent: #1f4e8c;                     // the one accent colour (links, small highlights)
+$ink: #1d2126;                        // body text
+$muted: #5f6670;                      // dates, venues, secondary text
+$rule: #e6e8eb;                       // hairlines
+
+$sans-serif: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$serif: "Source Serif 4", "Source Serif Pro", Georgia, "Times New Roman", serif;
+
+/* ---- Minimal Mistakes overrides (must come before the theme imports) ---- */
+$global-font-family: $sans-serif;
+$header-font-family: $serif;
+$sans-serif-narrow: $sans-serif;
+$text-color: $ink;
+$muted-text-color: $muted;
+$border-color: $rule;
+$background-color: #fff;
+$primary-color: $accent;
+$link-color: $accent;
+$link-color-hover: darken($accent, 12%);
+$link-color-visited: $accent;
+$masthead-link-color: $ink;
+$masthead-link-color-hover: $accent;
+$max-width: 1024px;
+
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+@import "site"; // custom layout and components (_sass/_site.scss)

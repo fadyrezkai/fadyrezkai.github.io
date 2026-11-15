@@ -1,0 +1,28 @@
+---
+title: "Publications"
+permalink: /publications/
+layout: plain
+---
+{%- comment -%} Rendered from _data/publications.yml. {%- endcomment -%}
+
+<section class="section" id="papers">
+  <h2 class="section-title">Papers</h2>
+  <div class="section-body">
+    <ul class="pub-list">
+      {%- for pub in site.data.publications -%}
+        {%- if pub.type != "project" -%}{% include publication.html pub=pub %}{%- endif -%}
+      {%- endfor -%}
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="projects">
+  <h2 class="section-title">Other research projects</h2>
+  <div class="section-body">
+    <ul class="pub-list">
+      {%- for pub in site.data.publications -%}
+        {%- if pub.type == "project" -%}{% include publication.html pub=pub %}{%- endif -%}
+      {%- endfor -%}
+    </ul>
+  </div>
+</section>
