@@ -1,4 +1,4 @@
-# fadyrezkghattas.github.io
+# fadyrezkai.github.io
 
 Personal research site. Jekyll + Minimal Mistakes, deployed to GitHub Pages by
 `.github/workflows/jekyll.yml` on push to `master`.
