@@ -11,13 +11,28 @@ profile_header: true
 <section class="section" id="about">
   <h2 class="section-title">About</h2>
   <div class="section-body prose">
-    I am an ML researcher working on world models for embodied robotics at Samsung AI Research, Cambridge, where I build hierarchical planners that only commit to sub-goals the world model can actually reach. I recently submitted my PhD at the University of Edinburgh, advised by Timothy Hospedales and Henry Gouk.<br><br>
+    <p>I work to bridge the gap between benchmark performance and real-world AI capabilities. My research tests whether our experiments support the claims we make about AI, and builds methods whose gains hold up, across evaluation, post-training and world models.</p>
 
-    My research asks whether our measurements of AI progress capture what they claim to. I showed that a learned optimizer’s reported gains depend on the evaluation protocol, built certified performance guarantees for few-shot transfer of foundation models (ICML 2026), and showed that reward-model accuracy doesn’t predict how the aligned model behaves for users (EMNLP 2026).<br><br>
+    <p>I'm currently working on world models at Samsung AI Research, Cambridge, and recently submitted my PhD at the University of Edinburgh, advised by Timothy Hospedales and Henry Gouk. Along the way I held an A*STAR PhD Research Fellowship working on Singapore's S$70M National Multimodal LLM Programme, interned at Samsung AI Research, and co-founded FastAutomate, a GUI-automation agent startup.</p>
 
-    Before the PhD, I co-founded FastAutomate, a GUI-automation agent startup.<br><br>
+    <p class="closing">I'm looking for research roles in evaluation, post-training and world models from March 2027.</p>
+  </div>
+</section>
 
-    I am looking for research roles in evaluation, post-training and world models from March 2027.
+<section class="section" id="research">
+  <h2 class="section-title">Research areas</h2>
+  <div class="section-body">
+    <ol class="research-list">
+      {%- for area in site.data.research %}
+      <li class="research-item">
+        <span class="research-title">{{ area.title }}{% if area.current %} <span class="research-current">current</span>{% endif %}</span>
+        <span class="research-desc">{{ area.description }}</span>
+        {%- if area.venue and area.venue != "" %}
+        <span class="research-venue">{{ area.venue }}</span>
+        {%- endif %}
+      </li>
+      {%- endfor %}
+    </ol>
   </div>
 </section>
 

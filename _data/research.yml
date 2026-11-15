@@ -1,0 +1,22 @@
+# Research areas, shown under About in this order.
+#   title        bold heading
+#   current      true = shows a "current" marker
+#   description  one or two sentences
+#   venue        muted line under the description
+
+- title: "World models & hierarchical planning"
+  current: true
+  description: "Hierarchical planners that commit only to sub-goals the world model predicts are reachable."
+  venue: "Metro-WM, under review at ICLR 2027"
+
+- title: "Test-time personalized alignment"
+  description: "Steering LLMs to individual users at test time with reward-guided decoding. Showed that reward-model accuracy does not predict how well the model follows each user, and proposed policy accuracy to measure it directly."
+  venue: "EMNLP 2026"
+
+- title: "Safety-critical few-shot adaptation of foundation models"
+  description: "Weight-space learning that gives certified performance guarantees when adapting foundation models from a few examples."
+  venue: "ICML 2026"
+
+- title: "Evaluating training algorithms for pre-training"
+  description: "How evaluation protocols decide whether a new optimizer looks better than it is; a case study of VeLO's 4,000 TPU-months."
+  venue: "NeurIPS 2023 ICBINB Workshop"

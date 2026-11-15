@@ -4,16 +4,14 @@ name: "Fady Rezk"
 role: "Research Scientist: Evaluation, Post-Training & World Models"
 photo: "/assets/images/profile.jpg"
 
-# Short factual line under the role (from the CV). Leave empty to hide.
-currently: "Currently: World Models Research at Samsung AI Research, Cambridge"
+# Status line under the role. Leave empty to hide.
+currently: "Currently: world models at Samsung AI Research, Cambridge"
 
-# Topic chips under the links. Phrased from the CV summary; edit freely or empty the list.
+# Topic chips under the links.
 interests:
-  - "Long-horizon planning with world models"
-  - "Reliable agentic systems"
-  - "Benchmarking & evaluation"
-  - "Efficient AI"
-  - "Trustworthy AI & alignment"
+  - "Evaluation & benchmarking"
+  - "Post-training & reward models"
+  - "World models & planning"
 
 # icon = Font Awesome 5 class (loaded by the theme)
 links:

@@ -365,3 +365,54 @@ details[open] > summary:before { content: "−"; }
   .news-list li { grid-template-columns: 1fr; gap: 0.1rem; }
   .page-title { font-size: 2rem; margin-top: 2rem; }
 }
+
+/* ---- About prose ---- */
+.prose {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  p { margin: 0 0 1rem; }
+  p:last-child { margin-bottom: 0; }
+  .closing { font-weight: 500; color: $ink; }
+}
+
+/* ---- Research areas ---- */
+.research-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: area;
+}
+.research-item {
+  counter-increment: area;
+  position: relative;
+  padding-left: 2.25rem;
+  margin: 0 0 1.4rem;
+  &:last-child { margin-bottom: 0; }
+  &:before {
+    content: counter(area, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 0.15rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: $accent;
+    font-variant-numeric: tabular-nums;
+  }
+  > span { display: block; }
+}
+.research-title { font-weight: 600; line-height: 1.4; }
+.research-current {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.05rem 0.45rem;
+  border-radius: 999px;
+  background: $accent;
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  vertical-align: 0.15em;
+}
+.research-desc { font-size: 0.93rem; margin-top: 0.15rem; }
+.research-venue { font-size: 0.85rem; color: $muted; font-style: italic; margin-top: 0.15rem; }
