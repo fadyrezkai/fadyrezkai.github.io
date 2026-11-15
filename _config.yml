@@ -20,7 +20,7 @@ title                    : "Fady Rezk"
 title_separator          : "|"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Fady Rezk"
-description              : "Fady Rezk. Personal website." # TODO: replace with one-line role
+description              : "Fady Rezk, Research Scientist: Evaluation, Post-Training & World Models. Currently at Samsung AI Research, Cambridge. PhD (submitted), University of Edinburgh."
 url                      : "https://fadyrezkghattas.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "FadyRezkGhattas/fadyrezkghattas.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -89,7 +89,10 @@ og_image                 : # Open Graph/Twitter default site image
 social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  links: # An array of links to social media profiles (emitted as schema.org "sameAs")
+    - "https://scholar.google.com/citations?user=WPdQj24AAAAJ"
+    - "https://www.linkedin.com/in/fady-rezk/"
+    - "https://github.com/FadyRezkGhattas"
 
 # Analytics
 analytics:
