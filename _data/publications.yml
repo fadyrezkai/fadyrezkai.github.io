@@ -1,0 +1,117 @@
+# Publications, newest first.
+#
+# Fields
+#   title     paper title
+#   authors   list of names; "Fady Rezk" is bolded automatically
+#   venue     where it appeared (free text)
+#   tag       short badge shown next to the entry, e.g. "ICML 2026"
+#   selected  true = shown on the home page; everything is shown on /publications/
+#   takeaway  one line summarising the result (rendered only when filled in)
+#   paper     link to the paper (arXiv / OpenReview / proceedings); leave empty if none
+#   code      link to the code; leave empty if none
+#   type      "paper" (default) or "project" (listed under "Other research projects")
+#   note      optional extra line under the entry
+
+- title: "Metro-WM: Long-Horizon Latent Planning with Realisable Sub-Goals"
+  authors: [Royson Lee, Fady Rezk, Titouan Parcollet, Timothy Hospedales, Cristina Cornelio]
+  venue: "Under review at ICLR 2027"
+  tag: "Under review"
+  selected: true
+  takeaway: ""  # TODO: one-line takeaway
+  paper: "https://openreview.net/forum?id=ydh3XsRypN"
+  code: ""
+
+- title: "The Reward Model Selection Crisis in Personalized Alignment"
+  authors: [Fady Rezk, Yuangang Pan, Chuan-Sheng Foo, Xun Xu, Nancy Chen, Henry Gouk, Timothy Hospedales]
+  venue: "EMNLP 2026"
+  tag: "EMNLP 2026"
+  selected: true
+  takeaway: ""  # TODO: one-line takeaway
+  paper: "https://arxiv.org/abs/2512.23067"
+  code: ""
+
+- title: "Weight Space Learning for Certifiable Few-shot Transfer Learning"
+  authors: [Fady Rezk, Royson Lee, Henry Gouk, Timothy Hospedales, Minyoung Kim]
+  venue: "ICML 2026. ICLR 2025 Weight Space Learning Workshop (Spotlight & Oral)"
+  tag: "ICML 2026"
+  selected: true
+  takeaway: ""  # TODO: one-line takeaway
+  paper: "https://arxiv.org/abs/2502.06970"
+  code: ""
+
+- title: "FedP2EFT: Federated Learning to Personalize PEFT for Multilingual LLMs"
+  authors: [Royson Lee, Minyoung Kim, Fady Rezk, Rui Li, Stylianos I. Venieris, Timothy Hospedales]
+  venue: "AAAI 2026 (Poster)"
+  tag: "AAAI 2026"
+  selected: true
+  takeaway: ""  # TODO: one-line takeaway
+  paper: "https://arxiv.org/abs/2502.04387"
+  code: ""
+
+- title: "EEVEE and GATE: Finding the Right Benchmarks and How to Run Them Seamlessly"
+  authors: [Antreas Antoniou, Eleni Triantafillou, Hugo Larochelle, Sebastien Montella, Fady Rezk, Kiyoon Kim, Linus Ericsson, Pavlos Vougiouklis, Justin Engelmann, Elliot J. Crowley, Srihari Humbarwadi, Yi Liu, Guang Yang, Jeff Z. Pan, Amos Storkey]
+  venue: "Preprint, submitted to the NeurIPS 2024 Datasets and Benchmarks Track"
+  tag: "Preprint"
+  selected: true
+  takeaway: ""  # TODO: one-line takeaway
+  paper: "https://openreview.net/forum?id=0SMhqvgHST"
+  code: ""
+
+- title: "Liouna: Biologically Plausible Learning for Efficient Pre-Training of Transferrable Deep Models"
+  authors: [Fady Rezk, Antreas Antoniou, Henry Gouk, Timothy Hospedales]
+  venue: "ICML 2024 WANT Workshop"
+  tag: "ICML 2024 Workshop"
+  selected: true
+  takeaway: ""  # TODO: one-line takeaway
+  paper: "https://openreview.net/forum?id=bYwg5Awx6n"
+  code: ""
+
+- title: "Is Scaling Learned Optimizers Worth It? Evaluating the Value of VeLO's 4000 TPU Months"
+  authors: [Fady Rezk, Antreas Antoniou, Henry Gouk, Timothy Hospedales]
+  venue: "NeurIPS 2023 ICBINB Workshop"
+  tag: "NeurIPS 2023 Workshop"
+  selected: true
+  takeaway: ""  # TODO: one-line takeaway
+  paper: "https://arxiv.org/abs/2310.18191"
+  code: ""
+
+# Carried over from the previous publications page (not in the CV's selected list).
+- title: "Intuitive Interfaces in Human-Robot Interaction"
+  authors: [Andrew Holmes, Areeb Sherwani, Emma Kok, Fady Rezk, Gianmarco Pisanelli, Xin Wen, Jonathan M. Aitken, Iveta Eimontaite, Chelsea Sabo, David Cameron]
+  venue: "19th Towards Autonomous Robotic Systems Conference (TAROS 2018)"
+  tag: "TAROS 2018"
+  selected: false
+  takeaway: ""  # TODO: one-line takeaway
+  paper: "https://eprints.whiterose.ac.uk/136761/1/intuitive-interfaces-human(1).pdf"
+  code: ""
+
+# ---- Other research projects (from the CV) ----
+- type: project
+  title: "On Training Implicit Meta-Learning with Applications to Inductive Weighing in Consistency Regularization"
+  authors: [Fady Rezk, Ondrej Bohdal, Timothy Hospedales]
+  venue: "MSc dissertation, University of Edinburgh, 2021"
+  tag: "MSc 2021"
+  note: "Compared second-order gradient approximations in implicit meta-learning; designed an inductive semi-supervised method outperforming FixMatch."
+  selected: false
+  paper: "https://arxiv.org/abs/2310.18741"
+  code: ""
+
+- type: project
+  title: "BEng Thesis: Biomedical Systems Modelling and Decision Support"
+  authors: [Fady Rezk]
+  venue: "University of Sheffield, 2018 – 2019"
+  tag: "BEng 2019"
+  note: "Neuro-symbolic fuzzy-logic modelling to predict severely depressed LVEF on ICU admission (MIMIC-III)."
+  selected: false
+  paper: ""
+  code: ""
+
+- type: project
+  title: "Sheffield Undergraduate Research Experience: Intuitive Interfaces for Human-Robot Interaction"
+  authors: [Fady Rezk]
+  venue: "University of Sheffield, 2017"
+  tag: "SURE 2017"
+  note: "Designed and led a human-robot interaction experiment with engineers and psychologists; integrated Kaldi-ASR speech recognition."
+  selected: false
+  paper: ""
+  code: ""

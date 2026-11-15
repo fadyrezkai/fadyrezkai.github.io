@@ -1,0 +1,25 @@
+{%- assign p = site.data.profile -%}
+<header class="hero">
+  {%- if p.photo and p.photo != "" %}
+  <img class="hero-photo" src="{{ p.photo | relative_url }}" alt="Portrait of {{ p.name }}" width="600" height="708">
+  {%- endif %}
+  <div class="hero-text">
+    <h1 class="hero-name">{{ p.name }}</h1>
+    <p class="hero-role">{{ p.role }}</p>
+    {%- if p.currently and p.currently != "" %}
+    <p class="hero-currently"><span class="dot" aria-hidden="true"></span>{{ p.currently }}</p>
+    {%- endif %}
+    <ul class="hero-links">
+      {%- for link in p.links -%}
+        {%- if link.url and link.url != "" -%}
+        <li><a href="{{ link.url | relative_url }}"><i class="{{ link.icon }}" aria-hidden="true"></i><span>{{ link.label }}</span></a></li>
+        {%- endif -%}
+      {%- endfor -%}
+    </ul>
+    {%- if p.interests and p.interests.size > 0 %}
+    <ul class="hero-interests" aria-label="Research interests">
+      {%- for topic in p.interests %}<li>{{ topic }}</li>{% endfor -%}
+    </ul>
+    {%- endif %}
+  </div>
+</header>

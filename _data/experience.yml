@@ -1,0 +1,63 @@
+# Experience, newest first within each group.
+#
+# Fields
+#   group     "research" or "industry" (controls which sub-list it appears in)
+#   org       organisation (url optional)
+#   role      job title
+#   dates     free text, e.g. "Jun 2026 – Feb 2027"
+#   location  optional
+#   points    bullet points (inline Markdown allowed, e.g. *italics*)
+
+- group: research
+  org: "Samsung AI Research, Cambridge"
+  role: "Research Scientist Intern"
+  dates: "Jun 2026 – Feb 2027"
+  points:
+    - "Researching neuro-symbolic hierarchical planning with latent world models for long-horizon embodied robotics tasks."
+    - "Co-authored *Metro-WM*, a long-horizon latent planning method that constrains high-level planning to realisable sub-goals (under review at ICLR 2027)."
+
+- group: research
+  org: "A*STAR, Singapore"
+  role: "PhD Student Fellow"
+  dates: "Feb 2025 – Feb 2026"
+  points:
+    - "Led research on personalized alignment for LLMs, showing that standard reward-model evaluation fails to predict downstream behaviour; published at EMNLP 2026."
+    - "Proposed *policy accuracy*, a new evaluation metric for whether reward-guided LLMs correctly follow individual user preferences."
+
+- group: research
+  org: "Samsung AI Research, Cambridge"
+  role: "Research Scientist Intern"
+  dates: "Aug 2024 – Feb 2025"
+  points:
+    - "Developed STEEL, the first framework to give certifiable performance guarantees for foundation models in few-shot transfer learning; published at ICML 2026."
+    - "Scaled generative models over adapter parameter spaces to 1B parameters across vision and language tasks."
+
+- group: industry
+  org: "FastAutomate"
+  url: "https://fastautomate.com/"
+  role: "Co-Founder and Chief AI Officer"
+  dates: "Jun 2021 – May 2023"
+  points:
+    - "Co-founded an AI-powered GUI automation agent startup, leading technical strategy, product development and business operations."
+    - "Delivered client engagements including HR automation pipelines."
+    - "Built the team from the ground up, recruiting, training and managing engineers while balancing hands-on technical work with client delivery."
+
+- group: industry
+  org: "TMentors"
+  role: "ML Department Manager"
+  dates: "Jun 2021 – May 2023"
+  points:
+    - "Delivered a full-stack data science project for L’Azurdé, the largest jewellery e-commerce platform in the MENA region."
+    - "Built end-to-end BI solutions for enterprise clients, including ETL pipelines, PowerBI integrations and real-time dashboards."
+    - "Led team and project management, solution architecture, hiring, client relations, tender writing, DevOps and deployment."
+
+- group: industry
+  org: "Sharp Life Science"
+  role: "Student Researcher, Software Engineering / Acting QA Manager"
+  dates: "Sep 2017 – Sep 2018"
+  location: "Oxford Science Park, UK"
+  points:
+    - "Designed a surrogate lumped-parameter model for electrowetting dynamics, significantly speeding up prototyping."
+    - "Applied graph theory to validate, schedule and design laboratory workflows; built an extensible, temporally queryable DAG data structure."
+    - "Designed and deployed a production domain-specific dataflow programming language in 10 weeks, still in active use."
+    - "Introduced an integration testing framework across all software products; acted as QA Manager for the 2nd-generation platform release."

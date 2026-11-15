@@ -1,0 +1,16 @@
+---
+layout: default
+---
+{%- comment -%}
+  Simple single-column layout used by the home page and the publications page.
+  Set `profile_header: true` in front matter to show the name/role/links header.
+{%- endcomment -%}
+<main id="main" class="site-main" role="main">
+  {% if page.profile_header %}
+    {% include profile-header.html %}
+  {% elsif page.title %}
+    <h1 class="page-title">{{ page.title }}</h1>
+  {% endif %}
+
+  {{ content }}
+</main>

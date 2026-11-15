@@ -1,0 +1,22 @@
+# Education, newest first.
+#   institution, degree, dates, location (optional), note (optional)
+
+- institution: "University of Edinburgh"
+  degree: "PhD in Artificial Intelligence"
+  note: "Thesis submitted October 2026. Supervised by Prof. Timothy Hospedales and Dr. Henry Gouk."
+  dates: "Oct 2022 – Oct 2026"
+  location: "Edinburgh, UK"
+
+- institution: "A*STAR, Singapore"
+  degree: "PhD Research Fellowship"
+  dates: "Feb 2025 – Feb 2026"
+
+- institution: "University of Edinburgh"
+  degree: "MSc in Artificial Intelligence, Distinction"
+  dates: "Sep 2020 – Aug 2021"
+  location: "Edinburgh, UK"
+
+- institution: "University of Sheffield"
+  degree: "BEng Computer Systems Engineering with a Year in Industry, First Class Honours"
+  dates: "Sep 2015 – Jun 2019"
+  location: "Sheffield, UK"

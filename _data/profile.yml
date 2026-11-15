@@ -1,0 +1,32 @@
+# Home page hero.
+
+name: "Fady Rezk"
+role: "Research Scientist: Evaluation, Post-Training & World Models"
+photo: "/assets/images/profile.jpg"
+
+# Status line under the role. Leave empty to hide.
+currently: "Currently: world models at Samsung AI Research, Cambridge"
+
+# Topic chips under the links.
+interests:
+  - "Evaluation & benchmarking"
+  - "Post-training & reward models"
+  - "World models & planning"
+
+# icon = Font Awesome 5 class (loaded by the theme)
+links:
+  - label: "Email"
+    icon: "fas fa-envelope"
+    url: "mailto:fady.r.ghattas@gmail.com"
+  - label: "Scholar"
+    icon: "fas fa-graduation-cap"
+    url: "https://scholar.google.com/citations?user=WPdQj24AAAAJ"
+  - label: "GitHub"
+    icon: "fab fa-github"
+    url: "https://github.com/FadyRezkGhattas"
+  - label: "LinkedIn"
+    icon: "fab fa-linkedin-in"
+    url: "https://www.linkedin.com/in/fady-rezk/"
+  - label: "CV"
+    icon: "fas fa-file-pdf"
+    url: "/assets/files/Fady_Rezk_CV.pdf"
