@@ -129,6 +129,9 @@ include:
   - _pages
 
 exclude:
+  - CLAUDE.md
+  - CLAUDE.local.md
+  - .claude
   - "*.sublime-project"
   - "*.sublime-workspace"
   - vendor
