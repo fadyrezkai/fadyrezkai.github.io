@@ -49,12 +49,12 @@
   code: ""
 
 - title: "EEVEE and GATE: Finding the Right Benchmarks and How to Run Them Seamlessly"
-  authors: [Antreas Antoniou, Eleni Triantafillou, Hugo Larochelle, Fady Rezk, et al.]  # TODO: full author list
-  venue: ""  # TODO: venue / status (not stated in CV)
-  tag: ""  # TODO: short badge once venue is known
+  authors: [Antreas Antoniou, Eleni Triantafillou, Hugo Larochelle, Sebastien Montella, Fady Rezk, Kiyoon Kim, Linus Ericsson, Pavlos Vougiouklis, Justin Engelmann, Elliot J. Crowley, Srihari Humbarwadi, Yi Liu, Guang Yang, Jeff Z. Pan, Amos Storkey]
+  venue: "Preprint, submitted to the NeurIPS 2024 Datasets and Benchmarks Track"
+  tag: "Preprint"
   selected: true
   takeaway: ""  # TODO: one-line takeaway
-  paper: ""  # TODO: link if public
+  paper: "https://openreview.net/forum?id=0SMhqvgHST"
   code: ""
 
 - title: "Liouna: Biologically Plausible Learning for Efficient Pre-Training of Transferrable Deep Models"

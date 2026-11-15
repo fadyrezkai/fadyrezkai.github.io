@@ -1,36 +1,33 @@
 # News, newest first. Add new items at the top.
 #   date  free text shown as-is (e.g. "Oct 2026")
 #   text  inline Markdown allowed (links, *italics*)
-#
-# Built only from facts in the CV. Where the CV gives a year but no month,
-# the month is marked TODO.
 
 - date: "Oct 2026"
   text: "Submitted my PhD thesis at the University of Edinburgh."
 
-- date: "2026"  # TODO: month
+- date: "Sep 2026"
   text: "*Metro-WM: Long-Horizon Latent Planning with Realisable Sub-Goals* is under review at ICLR 2027."
 
-- date: "2026"  # TODO: month
+- date: "Aug 2026"
   text: "*The Reward Model Selection Crisis in Personalized Alignment* accepted at EMNLP 2026."
-
-- date: "2026"  # TODO: month
-  text: "*Weight Space Learning for Certifiable Few-shot Transfer Learning* (STEEL) accepted at ICML 2026."
 
 - date: "Jun 2026"
   text: "Joined Samsung AI Research, Cambridge as a Research Scientist Intern, working on neuro-symbolic hierarchical planning with latent world models."
 
-- date: "2026"  # TODO: month
+- date: "Apr 2026"
+  text: "*Weight Space Learning for Certifiable Few-shot Transfer Learning* (STEEL) accepted at ICML 2026."
+
+- date: "Nov 2025"
   text: "*FedP2EFT: Federated Learning to Personalize PEFT for Multilingual LLMs* at AAAI 2026."
+
+- date: "Mar 2025"
+  text: "*Weight Space Learning for Certifiable Few-shot Transfer Learning* selected for a Spotlight & Oral at the ICLR 2025 Weight Space Learning Workshop."
 
 - date: "Feb 2025"
   text: "Started the A*STAR PhD Research Fellowship in Singapore."
 
-- date: "2025"  # TODO: month
-  text: "*Weight Space Learning for Certifiable Few-shot Transfer Learning* selected for a Spotlight & Oral at the ICLR 2025 Weight Space Learning Workshop."
-
 - date: "Aug 2024"
   text: "Joined Samsung AI Research, Cambridge as a Machine Learning Research Engineer (Research Scientist Intern)."
 
-- date: "2024"  # TODO: month
+- date: "2024"
   text: "*Liouna* presented at the ICML 2024 WANT Workshop."

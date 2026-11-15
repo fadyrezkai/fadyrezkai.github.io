@@ -19,7 +19,7 @@
 - group: research
   org: "A*STAR, Singapore"
   role: "PhD Student Fellow"
-  dates: "2024 – 2025"  # TODO: CV lists 2024 – 2025 here but Feb 2025 – Feb 2026 under Education; confirm
+  dates: "Feb 2025 – Feb 2026"
   points:
     - "Led research on personalized alignment for LLMs, showing that standard reward-model evaluation fails to predict downstream behaviour; published at EMNLP 2026."
     - "Proposed *policy accuracy*, a new evaluation metric for whether reward-guided LLMs correctly follow individual user preferences."
